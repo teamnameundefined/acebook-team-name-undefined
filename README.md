@@ -1,9 +1,10 @@
 # AceBook 
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+
 [![Build Status](https://travis-ci.com/teamnameundefined/acebook-team-name-undefined.svg?branch=master)](https://travis-ci.com/teamnameundefined/acebook-team-name-undefined)
 [![Maintainability](https://api.codeclimate.com/v1/badges/40d4314cb765e601a78b/maintainability)](https://codeclimate.com/github/teamnameundefined/acebook-team-name-undefined/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/40d4314cb765e601a78b/test_coverage)](https://codeclimate.com/github/teamnameundefined/acebook-team-name-undefined/test_coverage)
-
-[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
 
 REQUIRED INSTRUCTIONS:
 
