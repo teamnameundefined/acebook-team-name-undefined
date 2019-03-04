@@ -38,4 +38,14 @@ RSpec.feature "Sign Up Errors", type: :feature do
     expect(page).to have_content("Password confirmation doesn't match Password")
   end
 
+  scenario "Throws error and stays on same route if email is not in vaild format" do
+    visit "/"
+    click_link("Sign up", match: :first)
+    fill_in "user_email", with: "james.gmail.com"
+    fill_in "user_password", with: "password1234"
+    fill_in "user_password_confirmation", with: "thomas1234"
+    click_button "Sign up"
+    expect(current_path).to eq("/users")
+  end
+
 end
