@@ -108,12 +108,19 @@ RSpec.describe PostsController, type: :controller do
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    # skip("Add a hash of attributes valid for your model")
+    { message: 'message' }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    # skip("Add a hash of attributes invalid for your model")
+    { message: nil }
   }
+
+  before(:each) do
+    @user = create(:user)
+    sign_in @user
+  end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -124,14 +131,6 @@ RSpec.describe PostsController, type: :controller do
     it "returns a success response" do
       Post.create! valid_attributes
       get :index, params: {}, session: valid_session
-      expect(response).to be_successful
-    end
-  end
-
-  describe "GET #show" do
-    it "returns a success response" do
-      post = Post.create! valid_attributes
-      get :show, params: {id: post.to_param}, session: valid_session
       expect(response).to be_successful
     end
   end
@@ -152,9 +151,9 @@ RSpec.describe PostsController, type: :controller do
         }.to change(Post, :count).by(1)
       end
 
-      it "redirects to the created post" do
+      it "redirects to all posts" do
         post :create, params: {post: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(Post.last)
+        expect(response).to redirect_to(posts_url)
       end
     end
 
