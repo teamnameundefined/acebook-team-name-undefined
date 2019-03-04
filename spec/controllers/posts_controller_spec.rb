@@ -44,13 +44,36 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
-  describe 'update' do
-    it 'updates a post' do
-      @post = Post.create(message: 'New new post')
-      p @post.message
-      @post.update(message: 'Edited new new post')
-      p @post.message
-      expect(@post.message).to eq('Edited new new post')
+  describe "update" do
+    it "updates a post" do
+      post :create, params: { post: { message: "Hello, world!" } }
+      post :update, params: { post: { message: "Edited new new post"} }
+      # post.update(message: "Edited new new post")
+      expect(post.message).to eq("Edited new new post")
+    end
+    it "updates a post correctly" do
+      # p 'start'
+      # p subject
+      # p 'end'
+      @post = Post.create(message: "Message1")
+      expect { @post.update(message: "Message2") }.to change { @post.message }.from("Message1").to("Message2")
+    end
+    it "updates the requested post" do
+      post = Post.create! valid_attributes
+      put :update, params: {id: post.to_param, post: new_attributes}, session: valid_session
+      post.reload
+      skip("Add assertions for updated state")
     end
   end
+
+  describe "/edit" do
+    it "responds with 200" do
+      get :index
+      post :create, params: { post: { message: "Hello, world!" } }
+      post :edit
+      post :update, params: { post: { message: "new comment" } }
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
