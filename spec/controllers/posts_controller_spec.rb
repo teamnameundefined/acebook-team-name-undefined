@@ -12,6 +12,7 @@ RSpec.describe PostsController, type: :controller do
   #   user.sign_in
   # end
 
+
   before(:each) do
     @user = create(:user)
     sign_in @user
@@ -40,6 +41,16 @@ RSpec.describe PostsController, type: :controller do
     it "responds with 200" do
       get :index
       expect(response).to have_http_status(200)
+    end
+  end
+
+  describe 'update' do
+    it 'updates a post' do
+      @post = Post.create(message: 'New new post')
+      p @post.message
+      @post.update(message: 'Edited new new post')
+      p @post.message
+      expect(@post.message).to eq('Edited new new post')
     end
   end
 end
