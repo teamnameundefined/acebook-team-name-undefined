@@ -12,9 +12,11 @@
 
 AceBook is being made as a Makers Academy Engineering Project.
 
-[Project Outline](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
+You can see our process, documentation, and guides on the [Wiki](https://github.com/teamnameundefined/acebook-team-name-undefined/wiki).
 
-[Kanban Board](https://goo.gl/q9NJFW)	
+[Project outline](https://github.com/makersacademy/course/tree/master/engineering_projects/rails) as defined by Makers.
+
+Get an idea of what we're working on, what needs done, and what has been done: [Kanban Board](https://goo.gl/q9NJFW)
 	
 ## Quickstart
 
