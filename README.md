@@ -12,11 +12,15 @@
 
 AceBook is being made as a Makers Academy Engineering Project.
 
-You can see our process, documentation, and guides on the [Wiki](https://github.com/teamnameundefined/acebook-team-name-undefined/wiki).
-
 [Project outline](https://github.com/makersacademy/course/tree/master/engineering_projects/rails) as defined by Makers.
 
 Get an idea of what we're working on, what needs done, and what has been done: [Kanban Board](https://goo.gl/q9NJFW)
+
+Visit our [Wiki](https://github.com/teamnameundefined/acebook-team-name-undefined/wiki) for information on our:
+  - Workflow
+  - Team pocesses
+  - Project documentation
+  - Shared learning documentation
 	
 ## Quickstart
 
@@ -30,6 +34,8 @@ First, clone this repository. Then:
 > bundle exec rspec # Run the tests to ensure it works
 > bin/rails server # Start the server at localhost:3000
 ```
+
+Heroku will automatically deploy the latest commit, if given the green light by Travis CI.
 
 ## How To Contribute
 See [CONTRIBUTING.md](CONTRIBUTING.md).
