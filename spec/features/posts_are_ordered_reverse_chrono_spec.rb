@@ -9,15 +9,15 @@ RSpec.feature "Timeline", type: :feature do
         find('.actions').find('input').click
 
         click_link "New post"
-        fill_in "Message", with: "1"
+        fill_in "Message", with: "1111"
         click_button "Submit"
         
         click_link "New post"
-        fill_in "Message", with: "2"
+        fill_in "Message", with: "2222"
         click_button "Submit"
         
         posts = page.all('.post')
         
-        expect(posts[0]).to have_content("2")
+        expect(posts[0]).to have_content("2222")
     end
 end
