@@ -24,7 +24,7 @@ class PostsController < ApplicationController
      flash[:alert] = "Your new post couldn't be created! Please check the form."
      render :new
     end
-   end
+  end
 
   def index
     @posts = Post.all
@@ -45,6 +45,13 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to(posts_path)
+  end
+
 
   def show
     @post = Post.find(params[:id])
