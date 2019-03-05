@@ -3,7 +3,7 @@
 <section class="posts">
   <% @posts.each do |post| %>
     <div class="post">
-      <p><%= post.message %></p>
+      <%= simple_format(post.message) %>
     </div>
   <% end %>
 
