@@ -2,12 +2,10 @@ require 'rails_helper'
 
 RSpec.feature "Timeline", type: :feature do
     scenario "Posts are in reverse chronologcal order" do
-        visit "/users/sign_up"
-        fill_in 'user_email', with: "1234@gmail.com"
-        fill_in 'user_password', with: "password"
-        fill_in 'user_password_confirmation', with: "password"
-        find('.actions').find('input').click
+        user = FactoryBot.create(:user)
+        login_as(user, :scope => :user)
 
+        visit "/"
         click_link "New post"
         fill_in "Message", with: "1"
         click_button "Submit"
