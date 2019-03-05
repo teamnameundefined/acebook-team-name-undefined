@@ -114,7 +114,7 @@ RSpec.describe PostsController, type: :controller do
 
   let(:invalid_attributes) {
     # skip("Add a hash of attributes invalid for your model")
-    { message: nil }
+    { message: 'mes' }
   }
 
   before(:each) do
@@ -178,16 +178,16 @@ RSpec.describe PostsController, type: :controller do
         skip("Add assertions for updated state")
       end
 
-      it "redirects to the post" do
+      it "redirects to all posts" do
         post = Post.create! valid_attributes
         put :update, params: {id: post.to_param, post: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(post)
+        expect(response).to redirect_to(posts_url)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
-        post = Post.create! valid_attributes
+        post = Post.create! invalid_attributes
         put :update, params: {id: post.to_param, post: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
