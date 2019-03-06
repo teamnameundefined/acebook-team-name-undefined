@@ -1,17 +1,13 @@
 <section class="posts">
   <% @posts.each do |post| %>
     <div class="post">
-<<<<<<< HEAD
       <%= simple_format(post.message) %>
-=======
-      <p>
-        <%= post.message %>
-          <%= link_to 'Edit', edit_post_path(post) %>
-          <%= link_to 'Delete', post_path(post), method: :delete, data: {
-              confirm: "Are you sure?"
-            } %>
-      </p>
->>>>>>> 35ddbc109b5d5349e75ec2da6a6ce12b58710a46
+      <div class="post--actions">
+         <%= link_to 'Edit', edit_post_path(post) %>
+        <%= link_to 'Delete', post_path(post), method: :delete, data: {
+            confirm: "Are you sure?"
+          } %>
+      </div>
     </div>
   <% end %>
 
