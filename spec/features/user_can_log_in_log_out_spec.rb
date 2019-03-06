@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 RSpec.feature "Log in/Log out", type: :feature do
+
+
   scenario "Can sign up via navigation bar" do
     visit "/"
+    page.find('#sign_up_button').click
     click_link("Sign up", match: :first)
     fill_in "user_email", with: "james@gmail.com"
     fill_in "user_password", with: "password123"
