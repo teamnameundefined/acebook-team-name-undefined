@@ -23,7 +23,6 @@ RSpec.feature "Posts", type: :feature do
     click_button "Sign up"
     visit "/posts"
     click_link "New post"
-    driver = Selenium::WebDriver.for :firefox
     page.driver.browser.find_element(:id, "post_message").send_keys("Hello, world! What is up?")
     page.driver.browser.find_element(:id, "post_message").send_keys(:enter)
     page.driver.browser.find_element(:id, "post_message").send_keys(:enter)
