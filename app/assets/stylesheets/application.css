@@ -41,6 +41,20 @@ body {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 2px 2px;
 }
 
+.post--actions {
+  text-align: right;
+}
+.post--actions a {
+  text-decoration: none;
+  color: #c6c7d2;
+  transition: color ease 0.5s;
+  font-size: 14px;
+}
+
+.post--actions a:hover {
+  color: #8d90a1;
+}
+
 .button {
   text-decoration: none;
   padding: 10px 20px;
