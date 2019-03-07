@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
     if @comment.save
       p 'SAVEEEEEDDDD'
       flash[:success] = "You commented the hell out of that post!"
-      redirect_to posts_path
+      redirect_to post_path(@post)
     else
       p 'NOT SAVEEEEDDD'
       flash[:alert] = "Check the comment form, something went horribly wrong."
