@@ -3,11 +3,19 @@
 </h1>
 <div id="comments">
   <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
-  <p>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+    <p>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+  <ul>
+    <% if @post.comments %>
+      <% @post.comments.each do |comment| %>
+        <li><%= comment.body %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
 </div>
