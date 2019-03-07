@@ -1,16 +1,26 @@
-# AceBook 
+<h1 align="center">AceBook</h1>
+
+<p align="center"><a href="https://acebook-team-undefined.herokuapp.com/">Visit AceBook</a></p>
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+
 [![Build Status](https://travis-ci.com/teamnameundefined/acebook-team-name-undefined.svg?branch=master)](https://travis-ci.com/teamnameundefined/acebook-team-name-undefined)
 [![Maintainability](https://api.codeclimate.com/v1/badges/40d4314cb765e601a78b/maintainability)](https://codeclimate.com/github/teamnameundefined/acebook-team-name-undefined/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/40d4314cb765e601a78b/test_coverage)](https://codeclimate.com/github/teamnameundefined/acebook-team-name-undefined/test_coverage)
 
-REQUIRED INSTRUCTIONS:
+## Description
 
-1. Fork this repository to `acebook-team-name-undefined` and customize
-the below**
+AceBook is being made as a Makers Academy Engineering Project.
 
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
+[Project outline](https://github.com/makersacademy/course/tree/master/engineering_projects/rails) as defined by Makers.
 
-2. The Kanban board for this project is here: [https://goo.gl/q9NJFW](https://goo.gl/q9NJFW)	
+Get an idea of what we're working on, what needs done, and what has been done: [Kanban Board](https://goo.gl/q9NJFW)
+
+Visit our [Wiki](https://github.com/teamnameundefined/acebook-team-name-undefined/wiki) for information on our:
+  - Workflow
+  - Team pocesses
+  - Project documentation
+  - Shared learning documentation
 	
 ## Quickstart
 
@@ -25,5 +35,7 @@ First, clone this repository. Then:
 > bin/rails server # Start the server at localhost:3000
 ```
 
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+Heroku will automatically deploy the latest commit, if given the green light by Travis CI.
+
+## How To Contribute
+See [CONTRIBUTING.md](CONTRIBUTING.md).

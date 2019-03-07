@@ -4,6 +4,7 @@ SimpleCov.start do
   add_filter "/app/helpers/application_helper.rb"
   add_filter "/app/controllers/application_controller.rb"
   add_filter "/app/models/application_record.rb"
+  add_filter "/public/assets/"
 end
 
 require 'active_record'

@@ -24,7 +24,7 @@ RSpec.feature "Recover password", type: :feature do
     click_link "Log out"
     click_link "Forgot your password?"
     fill_in "user_email", with: "1234@gmail.com"
-    click_button "Send me reset password instructions"
+    click_button "Send Recovery Link"
     expect(page).to have_content("You will receive an email with instructions on how to reset your password in a few minutes.")
     expect(current_path).to eq("/users/sign_in")
     assert !ActionMailer::Base.deliveries.empty?
@@ -32,20 +32,11 @@ RSpec.feature "Recover password", type: :feature do
 
   scenario "Can't change password if wrong email entered" do
     visit "/"
-    # click_link("Sign up", match: :first)
-    # fill_in "user_email", with: "james@gmail.com"
-    # fill_in "user_password", with: "password123"
-    # fill_in "user_password_confirmation", with: "password123"
-    # click_button "Sign up"
-
-    # user = FactoryBot.create(:user)
-    # login_as(user, :scope => :user)
-    # visit "/"
 
     click_link "Log out"
     click_link "Forgot your password?"
     fill_in "user_email", with: "j@gmail.com"
-    click_button "Send me reset password instructions"
+    click_button "Send Recovery Link"
     expect(page).to have_content("Email not found")
     expect(current_path).to eq("/users/password")
   end
