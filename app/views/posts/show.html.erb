@@ -2,8 +2,12 @@
   <%= @post.message %>
 </h1>
 <div id="comments">
-  <h2><%= @post.comments.count %> Comments</h2>
-  <%= render @post.comments %>
-  <h3> Post comment: </h3>
-  <%= render "comments/form" %>
+  <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
 </div>

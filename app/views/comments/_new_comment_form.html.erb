@@ -1,6 +1,6 @@
-<%= form_for @comment do |f| %>
+<%= form_for [@post, @post.comments.new] do |f| %>
   <p>
-    <%= f.text_area :body %>
+    <%= f.text_field :body, placeholder: 'Add a comment...' %>
   </p>
   <br>
   <p>
