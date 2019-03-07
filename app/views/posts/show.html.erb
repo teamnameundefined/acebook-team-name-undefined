@@ -10,6 +10,7 @@
       <%= form.submit %>
     </p>
   <% end %>
+  <h3><%= pluralize(@post.comments.count, "comment") %> on this post</h3>
   <ul>
     <% if @post.comments %>
       <% @post.comments.each do |comment| %>
