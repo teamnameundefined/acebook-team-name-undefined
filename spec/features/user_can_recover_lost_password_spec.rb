@@ -21,7 +21,7 @@ RSpec.feature "Recover password", type: :feature do
     # login_as(user, :scope => :user)
     visit "/"
 
-    click_link "Log out"
+    click_link "Log Out"
     click_link "Forgot your password?"
     fill_in "user_email", with: "1234@gmail.com"
     click_button "Send Recovery Link"
@@ -33,7 +33,7 @@ RSpec.feature "Recover password", type: :feature do
   scenario "Can't change password if wrong email entered" do
     visit "/"
 
-    click_link "Log out"
+    click_link "Log Out"
     click_link "Forgot your password?"
     fill_in "user_email", with: "j@gmail.com"
     click_button "Send Recovery Link"

@@ -11,11 +11,11 @@ RSpec.feature "Edit profile", type: :feature do
 
   scenario "Can delete account" do
     visit "/"
-    click_link("Sign up", match: :first)
+    click_link("Sign Up", match: :first)
     fill_in "user_email", with: "james@gmail.com"
     fill_in "user_password", with: "password123"
     fill_in "user_password_confirmation", with: "password123"
-    click_button "Sign up"
+    click_button "Sign Up"
     click_link("Edit profile")
     expect(current_path).to eq("/users/edit")
     click_button "Cancel my account"
@@ -24,7 +24,7 @@ RSpec.feature "Edit profile", type: :feature do
     expect(current_path).to eq("/users/sign_in")
     fill_in "user_email", with: "james@gmail.com"
     fill_in "user_password", with: "password123"
-    click_button "Log in"
+    click_button "Log In"
     expect(current_path).to eq("/users/sign_in")
     expect(page).to have_content("Invalid Email or password")
   end

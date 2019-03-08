@@ -14,11 +14,11 @@ RSpec.feature "Posts", type: :feature do
 
   scenario "Can preserve line breaks in posts" do
     visit "/"
-    click_link("Sign up", match: :first)
+    click_link("Sign Up", match: :first)
     fill_in "user_email", with: "james@gmail.com"
     fill_in "user_password", with: "password123"
     fill_in "user_password_confirmation", with: "password123"
-    click_button "Sign up"
+    click_button "Sign Up"
     visit "/posts"
     click_link "New post"
     page.driver.browser.find_element(:id, "post_message").send_keys("Hello, world! What is up?")
