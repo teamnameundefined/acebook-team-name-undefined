@@ -27,6 +27,70 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Misc */
+
+.alert {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 20px;
+  width: min-content;
+  white-space: nowrap;
+}
+
+.alert-danger {
+  color: #ff7d7d;
+  background-color: #ffebeb;
+  border: 1px solid #f4e2eb;
+  border-radius: 3px;
+}
+
+.alert-success {
+  color: #29a55d;
+  background-color: #bee7cf;
+  border: 1px solid #b7ded1;
+  border-radius: 3px;
+}
+
+/* Header */
+
+header ul li,
+header nav,
+header ul,
+header h1 {
+  display: inline;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background-color: #31498c;
+  padding: 10px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+header h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header nav li {
+  color: #bac3d8;
+}
+header nav a {
+  text-decoration: none;
+  color: #bac3d8;
+}
+
+header nav ul li:not(:last-of-type) {
+  margin-right: 10px;
+}
 /* Posts  */
 
 .posts {
@@ -42,6 +106,10 @@ body {
   border-radius: 3px;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 2px 2px;
+}
+
+.post p:not(:last-of-type) {
+  margin-bottom: 10px;
 }
 
 .post--actions {
