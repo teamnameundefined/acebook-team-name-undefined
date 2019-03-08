@@ -11,4 +11,9 @@ FactoryBot.define do
     password { "password" }
     password_confirmation { "password" }
   end
+
+  factory :post do
+    message { "message" }
+    # post_id { 1 }
+  end
 end
