@@ -1,21 +1,23 @@
-<%= form_with(model: @post, local: true) do |form| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@post.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+<section class="post-form-section">
+  <%= form_with(model: @post, local: true) do |form| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@post.errors.count, "error") %> prohibited
+          this article from being saved:
+        </h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div> 
+      <%= form.label :message %>
+      <%= form.text_area :message %>
+
+      <%= form.submit "Submit", class: "button" %>
     </div>
   <% end %>
-  <div> 
-    <%= form.label :message %>
-    <%= form.text_area :message %>
-
-    <%= form.submit "Submit" %>
-  </div>
-<% end %>
+</section>

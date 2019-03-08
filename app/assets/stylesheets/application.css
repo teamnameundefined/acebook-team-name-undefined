@@ -140,6 +140,28 @@ header nav ul li:not(:last-of-type) {
   transition: background-color ease 0.5s;
 }
 
+.post-form-section {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.post-form-section form {
+  display: grid;
+  grid-row-gap: 15px;
+}
+
+.post-form-section label {
+  color: #41486e;
+}
+
+.post-form-section textarea {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  resize: none;
+}
+
 .button:hover {
   background-color: #32498d;
 }
