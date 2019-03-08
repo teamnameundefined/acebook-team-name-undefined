@@ -1,20 +1,22 @@
-<%= form_for @post do |form| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@post.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+<section class="post-form-section">
+  <%= form_for @post do |form| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@post.errors.count, "error") %> prohibited
+          this article from being saved:
+        </h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form.label :message %>
+    <%= form.text_area :message, rows: "10" %>
+
+
+    <%= form.submit "Submit", class: "button" %>
   <% end %>
-  <%= form.label :message %>
-  <%= form.text_area :message %>
-
-
-  <%= form.submit "Submit" %>
-<% end %>
+</section>

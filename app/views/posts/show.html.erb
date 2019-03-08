@@ -1,3 +1,23 @@
+<p><%= link_to 'Back', posts_path %></p>
 <h1>
   <%= @post.message %>
 </h1>
+<div id="comments">
+  <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+    <p>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+  <h3><%= pluralize(@post.comments.count, "comment") %> on this post</h3>
+  <ul>
+    <% if @post.comments %>
+      <% @post.comments.each do |comment| %>
+        <li><%= simple_format(comment.body) %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
+</div>
